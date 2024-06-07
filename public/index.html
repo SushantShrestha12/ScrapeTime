@@ -1,17 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ScrapeTime</title>
-    <link rel="stylesheet" href="CSS/index.css" />
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         <link rel="icon" href="Images/logo.png" type="image/png" />
+        <title>ScrapeTime</title>
+        <link rel="stylesheet" href="CSS/index.css" />
+      </head>
 <body>
-    <header>
-
+    <header class="mainHeader">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="Images/logo.png" alt="ScrapeTime Logo" />
+                <h1>ScrapeTime</h1>
+            </div>
+            <div class="trends-menu">
+                <div class="nav-menu">
+                    <ul>
+                        <li><a href="../HTML/index.html" id="nav_home">Home</a></li>
+                        <li><a href="../HTML/blog.html" id="nav_blog">Blog</a></li>
+                        <li><a href="../HTML/youtube.html" id="nav_youtube">YouTube</a></li>
+                        <li><a href="../HTML/insta.html" id="nav_insta">Instagram</a></li>
+                        <li><a href="../HTML/tiktok.html" id="nav_tiktok">TikTok</a></li>
+                    </ul>
+                </div>
+                <div class="viewTrend-btn">
+                    <button class="button">View Trends</button>
+                    <div class="dropdown-content">
+                        <a id="top" href="../HTML/trend_overview.html">Overview</a>
+                        <a id="middle" href="../HTML/trend_facebook.html">Facebook</a>
+                        <a id="middle" href="../HTML/trend_twitter.html">Twitter</a>
+                        <a id="middle" href="../HTML/trend_instagram.html">Instagram</a>
+                        <a id="middle" href="../HTML/trend_youtube.html">Youtube</a>
+                        <a id="bottom" href="../HTML/trend_tiktok.html">Tiktok</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main class="container">
+        <div class="banner">
+            <div class="banner_title">
+                <h1 class="heading">
+                    Spot Your Own Trends
+                </h1>
+                <p class="slogan">
+                    Search your own topics to see what is trending,
+                    <br>
+                    Save and monitor their trend over time in your own private area.
+                </p>
+                <div class="search-box">
+                    <input placeholder="Search for Country, City ......" type="text">
+                    <button type="submit"><img class="search-icon" src="../Images/Search-Icon.png"></button>
+                </div>
+            </div>
+        </div>
+        <div class="graph-box">
+            <img class="graph-templateimg" src="../Images/Graph.png" alt="Graph template">
+        </div>
+        <h1 class="global-heading"> Globally Trending</h1>
+        <div class="trend-box">
+            <div class="row1">
+                <div class="fblikepost">
+                    <img class="trendbox-img" src="../Images/fblikepost-banner.jpg" alt="FBlikepost Banner">
+                    <p class="trendbox-font">
+                        Most Liked Posts <br> on Facebook
+                    </p>
+                    <button class="viewPost-btn">View Post</button>
+                </div>
+                <div class="fbsharedpost">
+                    <img class="trendbox-img" src="../Images/fbsharepost-banner.jpg" alt="Facebook shared post Banner">
+                    <p class="trendbox-font">
+                        Most Liked Posts <br> on Facebook
+                    </p>
+                    <button class="viewPost-btn">View Post</button>
+                </div>
+                <div class="iglikepost">
+                    <img class="trendbox-img" src="../Images/iglikepost-banner.jpg" alt="Insta Like post Banner">
+                    <p class="trendbox-font">
+                        Most Liked Posts <br> on Instagram
+                    </p>
+                    <button class="viewPost-btn">View Post</button>
+                </div>
+            </div>
+            <div class="row2">
+                <div class="igtrendingacc">
+                    <img class="trendbox-img" src="../Images/igtrendingacc.jpeg" alt="Insta trending account Banner">
+                    <p class="trendbox-font">
+                        Top Trending Accounts <br> on Instagram
+                    </p>
+                    <button class="viewPost-btn">View Post</button>
+                </div>
+                <div class="yttopview">
+                    <img class="trendbox-img" src="../Images/yttopview-banner.jpg" alt="Youtube top view Banner">
+                    <p class="trendbox-font">
+                        Most Liked Posts <br> on Facebook
+                    </p>
+                    <button class="viewPost-btn">View Post</button>
+                </div>
+                <div class="yttopchannel">
+                    <img class="trendbox-img" src="../Images/yttopchannel-banner.jpg" alt="Youtube top channel Banner">
+                    <p class="trendbox-font">
+                        Most Liked Posts <br> on Facebook
+                    </p>
+                    <button class="viewPost-btn">View Post</button>
+                </div>
+            </div>
+        </div>
 
     </main>
 
