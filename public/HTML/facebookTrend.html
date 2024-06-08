@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="Images/logo.png" type="image/png" />
     <title>ScrapeTime</title>
-    <link rel="stylesheet" href="CSS/facebookTrend.css" />
+    <link rel="stylesheet" href="../CSS/facebookTrend.css" />
 </head>
 
 <body>
     <header class="mainHeader">
         <nav class="navbar">
             <div class="logo">
-                <img src="Images/logo.png" alt="ScrapeTime Logo" />
+                <img src="../Images/logo.png" alt="ScrapeTime Logo" />
                 <h1>ScrapeTime</h1>
             </div>
             <div class="trends-menu">
@@ -26,11 +26,11 @@
                 <div class="viewTrend-btn">
                     <button class="button">View Trends</button>
                     <div class="dropdown-content">
-                        <a id="top" href="HTML/facebookTrend.html">Facebook</a>
-                        <a id="middle" href="HTML/twitterTrend.html">Twitter</a>
-                        <a id="middle" href="HTML/instagramTrend.html">Instagram</a>
-                        <a id="middle" href="HTML/youtubeTrend.html">Youtube</a>
-                        <a id="bottom" href="HTML/tiktokTrend.html">Tiktok</a>
+                        <a id="top" href="facebookTrend.html">Facebook</a>
+                        <a id="middle" href="twitterTrend.html">Twitter</a>
+                        <a id="middle" href="instagramTrend.html">Instagram</a>
+                        <a id="middle" href="youtubeTrend.html">Youtube</a>
+                        <a id="bottom" href="tiktokTrend.html">Tiktok</a>
                     </div>
                 </div>
             </div>
@@ -41,71 +41,96 @@
         <div class="banner">
             <div class="banner_title">
                 <h1 class="heading">
-                    Spot Your Own Trends
+                    Spot for FaceBook Trends
                 </h1>
                 <p class="slogan">
-                    Search your own topics to see what is trending,
+                    Discover what's trending on Facebook,
                     <br>
-                    Save and monitor their trend over time in your own private area.
+                    Save your favorite posts and track their popularity over time in your own private dashboard.
                 </p>
-                <div class="search-box">
-                    <input placeholder="Search for Country, City ......" type="text">
-                    <button type="submit"><img class="search-icon" src="Images/Search-Icon.png"></button>
+                <div class="search-container">
+                    <div class="search-box">
+                        <input placeholder="Search for Country, City ......" type="text">
+                        <button type="submit"><img class="search-icon" src="../Images/Search-Icon.png"></button>
+                    </div>
+                    <div class="age-dropdown">
+                        <select id="age">
+                            <option value="">Select Age Group</option>
+                            <option value="0-10">0-10 years</option>
+                            <option value="10-20">10-20 years</option>
+                            <option value="20-30">20-30 years</option>
+                            <option value="30-40">30-40 years</option>
+                            <option value="40-50">40-50 years</option>
+                            <option value="50-60">50-60 years</option>
+                            <option value="60-70">60-70 years</option>
+                            <option value="70-80">70-80 years</option>
+                            <option value="80-90">80-90 years</option>
+                            <option value="90-100">90-100 years</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="graph-box">
-            <img class="graph-templateimg" src="Images/Graph.png" alt="Graph template">
+            <img class="graph-templateimg" src="../Images/graph-facebook.png" alt="Graph template">
         </div>
-        <h1 class="global-heading"> Globally Trending</h1>
+        <div class="sub-menu">
+            <p class="subMenu-items">Twitter</p>
+            <p class="subMenu-items">Instagram</p>
+            <p class="subMenu-items" id="active-submenu">FaceBook</p>
+            <p class="subMenu-items">YouTube</p>
+            <p class="subMenu-items">TikTok</p>
+        </div>
         <div class="trend-box">
             <div class="row1">
-                <div class="fblikepost">
-                    <img class="trendbox-img" src="Images/fblikepost-banner.jpg" alt="FBlikepost Banner">
-                    <p class="trendbox-font">
-                        Most Liked Posts <br> on Facebook
-                    </p>
-                    <button class="viewPost-btn">View Post</button>
+                <div class="trend-item">
+                    <img class="trend-img" src="../Images/fblikepost-banner.jpg" alt="FBlikepost Banner">
+                    <div class="trend-content">
+                        <p class="trend-title">Most Liked Posts on Facebook</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro velit eos dolorem cumque non cum laudantium itaque! Optio ab tempore et?</p>
+                        <button class="viewPost-btn">View Post</button>
+                    </div>
                 </div>
-                <div class="fbsharedpost">
-                    <img class="trendbox-img" src="Images/fbsharepost-banner.jpg" alt="Facebook shared post Banner">
-                    <p class="trendbox-font">
-                        Most Shared Posts <br> on Facebook
-                    </p>
-                    <button class="viewPost-btn">View Post</button>
-                </div>
-                <div class="iglikepost">
-                    <img class="trendbox-img" src="Images/iglikepost-banner.jpg" alt="Insta Like post Banner">
-                    <p class="trendbox-font">
-                        Most Liked Posts <br> on Instagram
-                    </p>
-                    <button class="viewPost-btn">View Post</button>
+                <div class="trend-item">
+                    <img class="trend-img" src="../Images/fbsharepost-banner.jpg" alt="Facebook shared post Banner">
+                    <div class="trend-content">
+                        <p class="trend-title">Most Shared Posts on Facebook</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro velit eos dolorem cumque non cum laudantium itaque! Optio ab tempore et?</p>
+                        <button class="viewPost-btn">View Post</button>
+                    </div>
                 </div>
             </div>
             <div class="row2">
-                <div class="igtrendingacc">
-                    <img class="trendbox-img" src="Images/igtrendingacc.jpeg" alt="Insta trending account Banner">
-                    <p class="trendbox-font">
-                        Trending Accounts <br> on Instagram
-                    </p>
-                    <button class="viewPost-btn">View Post</button>
+                <div class="trend-item">
+                    <img class="trend-img" src="../Images/fbcomment-banner.jpg" alt="FaceBook comment post Banner">
+                    <div class="trend-content">
+                        <p class="trend-title">Most Commented Posts on Facebook</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro velit eos dolorem cumque non cum laudantium itaque! Optio ab tempore et?</p>
+                        <button class="viewPost-btn">View Post</button>
+                    </div>
                 </div>
-                <div class="yttopview">
-                    <img class="trendbox-img" src="Images/yttopview-banner.jpg" alt="Youtube top view Banner">
-                    <p class="trendbox-font">
-                        Youtube Videos with <br> most Views
-                    </p>
-                    <button class="viewPost-btn">View Post</button>
+                <div class="trend-item">
+                    <img class="trend-img" src="../Images/fbpages-banner.jpg" alt="FaceBook trending pages banner">
+                    <div class="trend-content">
+                        <p class="trend-title">Top Trending pages in Facebook</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro velit eos dolorem cumque non cum laudantium itaque! Optio ab tempore et?</p>
+                        <button class="viewPost-btn">View Post</button>
+                    </div>
                 </div>
-                <div class="yttopchannel">
-                    <img class="trendbox-img" src="Images/yttopchannel-banner.jpg" alt="Youtube top channel Banner">
-                    <p class="trendbox-font">
-                        Youtube Channels with <br> most Subscribers
-                    </p>
-                    <button class="viewPost-btn">View Post</button>
+            </div>
+            <div class="row3">
+                <div class="trend-item">
+                    <!-- <img class="trend-img" src="../Images/fbpages-banner.jpg" alt="FaceBook trending pages banner"> -->
+                    <div class="trend-content">
+                        <p class="trend-title">Top Trending Hashtags '#' in Facebook</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro velit eos dolorem cumque non cum laudantium itaque! Optio ab tempore et?</p>
+                        <button class="viewPost-btn">View Post</button>
+                    </div>
                 </div>
             </div>
         </div>
+        
+        
 
     </main>
 
@@ -130,10 +155,10 @@
                 <p>Email: support@scrapetime.com</p>
                 <p>Phone: +1 234 567 890</p>
                 <div class="social-icons">
-                    <a href="#"><img src="Images/twitter-icon.png" alt="Twitter"></a>
-                    <a href="#"><img src="Images/instagram_icon.png" alt="Instagram"></a>
-                    <a href="#"><img src="Images/youtube_icon.png" alt="Youtube"></a>
-                    <a href="#"><img src="Images/facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="../Images/twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="../Images/instagram_icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="../Images/youtube_icon.png" alt="Youtube"></a>
+                    <a href="#"><img src="../Images/facebook-icon.png" alt="Facebook"></a>
                 </div>
             </div>
         </div>

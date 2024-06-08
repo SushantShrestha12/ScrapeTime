@@ -271,6 +271,37 @@ body {
     transform: scale(1.5);
 }
 
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between search box and dropdown */
+}
+.age-dropdown select {
+    width: 200px;
+    height: 8vh;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    outline: none;
+    background-color: #fff;
+    color: #5a9bd5;
+    font-size: 16px;
+    font-weight: 550;
+    appearance: none; 
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%235a9bd5" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .search-box input[type="text"], .age-dropdown select {
+        width: 300px;
+    }
+}
+
 
 .graph-box {
     display: flex;
