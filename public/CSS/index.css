@@ -23,7 +23,7 @@ body {
     /* Occupy the full width of the viewport */
     z-index: 1000;
     /* Ensure the header stays on top of other content */
-    background-color: #fff;
+    background-color: #ffffffd8;
     /* Background color for the header */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     /* Subtle shadow for depth */
@@ -321,7 +321,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: #5a9bd5;
+    background-color: #6CACE4;
     /* Background color for each div */
     border-radius: 30px;
     overflow: hidden;
@@ -385,4 +385,81 @@ body {
     .trend-box .row2>div {
         margin: 10px 0;
     }
+}
+
+
+/************************************ FOOTER ******************************/
+.mainFooter {
+    background-color: #012169;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px;
+}
+
+.footer-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section a {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.footer-section a {
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: #5a9bd5;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #ccc;
 }
