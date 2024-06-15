@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    var ctx = document.getElementById('metaChart').getContext('2d');
-    var metaChart = new Chart(ctx, {
+    const metaChartctx = document.getElementById('metaChart').getContext('2d');
+    const metaChart = new Chart(metaChartctx, {
         type: 'line',
         data: {
             labels: ['2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
@@ -109,8 +109,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 
-    var ctx = document.getElementById('googleChart').getContext('2d');
-    var googleChart = new Chart(ctx, {
+    const googleChartCtx = document.getElementById('googleChart').getContext('2d');
+    const googleChart = new Chart(googleChartCtx, {
         type: 'bar',
         data: {
             labels: ['2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
@@ -219,16 +219,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 
+    window.metaChart = metaChart;
+    window.googleChart = googleChart;
+
 });
 
-var currentChartIndex = 0;
-var charts = ['metaChart', 'googleChart'];
+let currentChartIndex = 0;
+const charts = ['metaChart', 'googleChart'];
+const chartTitles = [
+    'META Data Visualizations (2013-2023)',
+    'GOOGLE Data Visualizations (2013-2023)'
+];
 
 function changeChart(direction) {
-    var totalCharts = charts.length;
+    const totalCharts = charts.length;
     currentChartIndex = (currentChartIndex + direction + totalCharts) % totalCharts;
 
     charts.forEach((chartId, index) => {
         document.getElementById(chartId).style.display = index === currentChartIndex ? 'block' : 'none';
     });
+
+    document.getElementById('chartTitle').innerText = chartTitles[currentChartIndex];
 }
