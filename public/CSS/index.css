@@ -341,10 +341,16 @@ body {
     height: 400px;
 }
 
-.graph-box h1 {
+.static-graph-title {
     margin-bottom: 25px;
     margin-top: 10px;
-    font-size: 26px;
+    font-size: 28px;
+    font-weight: 500;
+    color: #fff;
+}
+#chartTitle {
+    color: #343333;
+    font-size: smaller;
 }
 
 .carousel {

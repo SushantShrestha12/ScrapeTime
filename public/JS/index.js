@@ -130,8 +130,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     yAxisID: 'y-spending' // Assign to y-axis for spending
                 },
                 {
-                    label: 'Ad Revenue in millions (USD)',
-                    data: [6986, 11492, 17079, 26885, 39942, 55013, 69655, 84169, 114934, 113643, 131948],
+                    label: 'Ad Revenue in billions (USD)',
+                    data: [51.07, 59.62, 67.39, 79.38, 95.58, 116.46, 134.81, 146.92, 209.49, 224.47, 237.86],
                     backgroundColor: 'rgba(75, 192, 192, 0.2)',
                     borderColor: 'rgba(75, 192, 192, 1)',
                     borderWidth: 2,
@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     beginAtZero: true,
                     title: {
                         display: true,
-                        text: 'Ad Revenue in millions (USD)',
+                        text: 'Ad Revenue in billions (USD)',
                         color: '#000'
                     },
                     type: 'linear',
@@ -227,8 +227,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 let currentChartIndex = 0;
 const charts = ['metaChart', 'googleChart'];
 const chartTitles = [
-    'META Data Visualizations (2013-2023)',
-    'GOOGLE Data Visualizations (2013-2023)'
+    'META Ad Spending vs Earnings (2013-2023)',
+    'GOOGLE Ad Spending vs Earnings (2013-2023)'
 ];
 
 function changeChart(direction) {
