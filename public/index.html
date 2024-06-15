@@ -71,9 +71,22 @@
                 </div>
             </div>
         </div>
-        <div class="graph-box">
-            <img class="graph-templateimg" src="Images/Graph.png" alt="Graph template">
+        <div class="graphArea">
+            <div class="carousel-controls">
+                <button class="carousel-control prev" onclick="changeChart(-1)">❮</button>
+            </div>
+            <div class="graph-box">
+                <h1>META Ad Spending vs Earnings (2013-2023)</h1>
+                <div class="chart-container">
+                    <canvas id="metaChart"></canvas>
+                    <canvas id="googleChart" style="display: none;"></canvas>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="carousel-control next" onclick="changeChart(1)">❯</button>
+            </div>
         </div>
+
         <h1 class="global-heading"> Globally Trending</h1>
         <div class="trend-box">
             <div class="row1">
@@ -158,6 +171,9 @@
             <p>&copy; 2024 ScrapeTime. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="JS/index.js"></script>
 
 </body>
 
