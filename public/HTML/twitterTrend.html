@@ -71,8 +71,21 @@
                 </div>
             </div>
         </div>
-        <div class="graph-box">
-            <img class="graph-templateimg" src="../Images/graph-twitter.png" alt="Graph template">
+        <div class="graphArea">
+            <div class="carousel-controls">
+                <button class="carousel-control prev" onclick="changeChart(-1)">❮</button>
+            </div>
+            <div class="graph-box">
+                <h1 class="static-graph-title">Business Trend Insights on ADS Expenses and Revenue</h1>
+                <div class="chart-container">
+                    <canvas id="metaChart"></canvas>
+                    <canvas id="googleChart" style="display: none;"></canvas>
+                </div>
+                <h1 id="chartTitle">META Ad Spending vs Earnings (2013-2023)</h1>
+            </div>
+            <div class="carousel-controls">
+                <button class="carousel-control next" onclick="changeChart(1)">❯</button>
+            </div>
         </div>
         <div class="sub-menu">
             <a href="twitterTrend.html">
@@ -176,6 +189,9 @@
             <p>&copy; 2024 ScrapeTime. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../JS/twitterTrend.js"></script>
 
 </body>
 
