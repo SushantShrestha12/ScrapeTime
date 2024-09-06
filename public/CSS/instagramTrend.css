@@ -284,9 +284,15 @@ a {
     transform: scale(1.5);
 }
 
-.age-dropdown select {
-    width: 200px;
-    height: 8vh;
+.filter{
+    display: flex;
+    justify-content: end;
+    margin-right: 3vw;
+}
+
+.age-dropdown select, .gender-dropdown select{
+    width: 120px;
+    height: 6vh;
     padding: 10px 25px;
     border: none;
     border-radius: 25px;
@@ -294,17 +300,18 @@ a {
     outline: none;
     background-color: #fff;
     color: #5a9bd5;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 550;
     appearance: none; 
     background-image: url('data:image/svg+xml;utf8,<svg fill="%235a9bd5" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
     background-repeat: no-repeat;
     background-position: right 20px center;
     background-size: 20px;
+    margin: 20px 10px;
 }
 
 @media (max-width: 768px) {
-    .search-box input[type="text"], .age-dropdown select {
+    .search-box input[type="text"], .age-dropdown select, .gender-dropdown select {
         width: 300px;
     }
 }
@@ -399,12 +406,8 @@ a {
 
 .subMenu-items:hover {
     border-bottom: 2px solid #5a9bd5;
-    font-size: 1.5rem; /* Slightly larger on hover for a smooth transition */
     cursor: pointer;
 }
-
-
-
 
 .global-heading {
     text-align: center;
@@ -542,7 +545,23 @@ a {
     }
 }
 
+#results {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    max-width: 600px;
+}
+.post {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
 
+.spinner-container{
+    display: flex;
+    justify-content: center;
+}
 
 
 /************************************ FOOTER ******************************/

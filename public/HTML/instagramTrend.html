@@ -1,111 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="Images/logo.png" type="image/png" />
     <title>ScrapeTime</title>
     <link rel="stylesheet" href="../CSS/instagramTrend.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="mainHeader">
-        <nav class="navbar">
-            <div class="logo">
-                <img src="../Images/logo.png" alt="ScrapeTime Logo" />
-                <h1>ScrapeTime</h1>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="../Images/logo.png" alt="ScrapeTime Logo" />
+          <h1>ScrapeTime</h1>
+        </div>
+        <div class="trends-menu">
+          <div class="nav-menu">
+            <ul>
+              <li><a href="../index.html" id="nav_home">Home</a></li>
+              <li><a href="#" id="nav_blog">Blog</a></li>
+            </ul>
+          </div>
+          <div class="viewTrend-btn">
+            <button class="button">View Trends</button>
+            <div class="dropdown-content">
+              <a id="top" href="facebookTrend.html">Facebook</a>
+              <a id="middle" href="twitterTrend.html">Twitter</a>
+              <a id="middle" href="instagramTrend.html">Instagram</a>
+              <a id="middle" href="youtubeTrend.html">Youtube</a>
+              <a id="bottom" href="tiktokTrend.html">Tiktok</a>
             </div>
-            <div class="trends-menu">
-                <div class="nav-menu">
-                    <ul>
-                        <li><a href="../index.html" id="nav_home">Home</a></li>
-                        <li><a href="#" id="nav_blog">Blog</a></li>
-                    </ul>
-                </div>
-                <div class="viewTrend-btn">
-                    <button class="button">View Trends</button>
-                    <div class="dropdown-content">
-                        <a id="top" href="facebookTrend.html">Facebook</a>
-                        <a id="middle" href="twitterTrend.html">Twitter</a>
-                        <a id="middle" href="instagramTrend.html">Instagram</a>
-                        <a id="middle" href="youtubeTrend.html">Youtube</a>
-                        <a id="bottom" href="tiktokTrend.html">Tiktok</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main class="container">
-        <div class="banner">
-            <div class="banner_title">
-                <h1 class="heading">
-                    Spot for Instagram Trends
-                </h1>
-                <p class="slogan">
-                    Explore the latest trends on Instagram,
-                    <br>
-                    Save your top posts and monitor their popularity in your custom dashboard.
-                </p>                
-                <div class="search-container">
-                    <div class="search-box">
-                        <input placeholder="Search for Country, City ......" type="text">
-                        <button type="submit"><img class="search-icon" src="../Images/Search-Icon.png"></button>
-                    </div>
-                    <div class="age-dropdown">
-                        <select id="age">
-                            <option value="">Select Age Group</option>
-                            <option value="0-10">0-10 years</option>
-                            <option value="10-20">10-20 years</option>
-                            <option value="20-30">20-30 years</option>
-                            <option value="30-40">30-40 years</option>
-                            <option value="40-50">40-50 years</option>
-                            <option value="50-60">50-60 years</option>
-                            <option value="60-70">60-70 years</option>
-                            <option value="70-80">70-80 years</option>
-                            <option value="80-90">80-90 years</option>
-                            <option value="90-100">90-100 years</option>
-                        </select>
-                    </div>
-                </div>
+      <div class="banner">
+        <div class="banner_title">
+          <h1 class="heading">Spot for Instagram Trends</h1>
+          <p class="slogan">
+            Explore the latest trends on Instagram,
+            <br />
+            Save your top posts and monitor their popularity in your custom
+            dashboard.
+          </p>
+          <div class="search-container">
+            <div class="search-box">
+              <input
+                id="locationInput"
+                placeholder="Search for Country, City ......"
+                type="text"
+                list="locations"
+              />
+              <datalist id="locations"></datalist>
+              <button type="submit">
+                <img
+                  class="search-icon"
+                  id="search-btn"
+                  src="../Images/Search-Icon.png"
+                />
+              </button>
             </div>
+            <!-- <div class="age-dropdown">
+              <select id="age">
+                <option value="">Select Age Group</option>
+                <option value="0-10">0-10 years</option>
+                <option value="10-20">10-20 years</option>
+                <option value="20-30">20-30 years</option>
+                <option value="30-40">30-40 years</option>
+                <option value="40-50">40-50 years</option>
+                <option value="50-60">50-60 years</option>
+                <option value="60-70">60-70 years</option>
+                <option value="70-80">70-80 years</option>
+                <option value="80-90">80-90 years</option>
+                <option value="90-100">90-100 years</option>
+              </select>
+            </div> -->
+          </div>
+          <!-- <div class="gender-dropdown">
+            <select id="gender">
+              <option value="">Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div> -->
         </div>
-        <div class="graphArea">
-            <div class="carousel-controls">
-                <button class="carousel-control prev" onclick="changeChart(-1)">❮</button>
-            </div>
-            <div class="graph-box">
-                <h1 class="static-graph-title">Business Trend Insights on ADS Expenses and Revenue</h1>
-                <div class="chart-container">
-                    <canvas id="metaChart"></canvas>
-                    <canvas id="googleChart" style="display: none;"></canvas>
-                </div>
-                <h1 id="chartTitle">META Ad Spending vs Earnings (2013-2023)</h1>
-            </div>
-            <div class="carousel-controls">
-                <button class="carousel-control next" onclick="changeChart(1)">❯</button>
-            </div>
+      </div>
+      <div class="graphArea">
+        <div class="carousel-controls">
+          <button class="carousel-control prev" onclick="changeChart(-1)">
+            ❮
+          </button>
         </div>
-        <div class="sub-menu">
-            <a href="twitterTrend.html">
-                <p class="subMenu-items">Twitter</p>
-            </a>
-            <a href="instagramTrend.html">
-                <p class="subMenu-items" id="active-submenu">Instagram</p>
-            </a>
-            <a href="facebookTrend.html">
-                <p class="subMenu-items">FaceBook</p>
-            </a>
-            <a href="youtubeTrend.html">
-                <p class="subMenu-items">YouTube</p>
-            </a>
-            <a href="tiktokTrend.html">
-                <p class="subMenu-items">TikTok</p>
-            </a>
+        <div class="graph-box">
+          <h1 class="static-graph-title">
+            Business Trend Insights on ADS Expenses and Revenue
+          </h1>
+          <div class="chart-container">
+            <canvas id="metaChart"></canvas>
+            <canvas id="googleChart" style="display: none"></canvas>
+          </div>
+          <h1 id="chartTitle">META Ad Spending vs Earnings (2013-2023)</h1>
         </div>
-        <div class="trend-box">
-            <div class="row1">
+        <div class="carousel-controls">
+          <button class="carousel-control next" onclick="changeChart(1)">
+            ❯
+          </button>
+        </div>
+      </div>
+      <div class="sub-menu" id="sub-menu">
+        <!-- <a href="twitterTrend.html">
+          <p class="subMenu-items">Twitter</p>
+        </a> -->
+        <a href="instagramTrend.html">
+          <p class="subMenu-items" id="active-submenu">Instagram</p>
+        </a>
+        <!-- <a href="facebookTrend.html">
+          <p class="subMenu-items">FaceBook</p>
+        </a> -->
+        <a href="youtubeTrend.html">
+          <p class="subMenu-items">YouTube</p>
+        </a>
+        <a href="tiktokTrend.html">
+          <p class="subMenu-items">TikTok</p>
+        </a>
+      </div>
+
+      <div class="spinner-container">
+        <div id="spinner" style="display: none">
+          <img src="../Images/spinner.gif" alt="Loading..." />
+        </div>
+      </div>
+
+      <div class="filter" id="filter" style="display: none;">
+        <div class="gender-dropdown">
+          <select id="gender">
+            <option value="">Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+
+        <div class="age-dropdown">
+          <select id="age">
+            <option value="">Age</option>
+            <option value="0-10">0-10 years</option>
+            <option value="10-20">10-20 years</option>
+            <option value="20-30">20-30 years</option>
+            <option value="30-40">30-40 years</option>
+            <option value="40-50">40-50 years</option>
+            <option value="50-60">50-60 years</option>
+            <option value="60-70">60-70 years</option>
+            <option value="70-80">70-80 years</option>
+            <option value="80-90">80-90 years</option>
+            <option value="90-100">90-100 years</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="trend-box">
+        
+      </div>
+    </main>
+
+    <footer class="mainFooter">
+      <div class="footer-container">
+        <div class="footer-section about">
+          <h2>About Us</h2>
+          <p>
+            ScrapeTime is your go-to platform for discovering the latest trends
+            across various social media platforms. Stay updated, save your
+            favorite trends, and monitor their progress over time.
+          </p>
+        </div>
+        <div class="footer-section links">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-section contact">
+          <h2>Contact Us</h2>
+          <p>Email: support@scrapetime.com</p>
+          <p>Phone: +1 234 567 890</p>
+          <div class="social-icons">
+            <a href="#"
+              ><img src="../Images/twitter-icon.png" alt="Twitter"
+            /></a>
+            <a href="#"
+              ><img src="../Images/instagram_icon.png" alt="Instagram"
+            /></a>
+            <a href="#"
+              ><img src="../Images/youtube_icon.png" alt="Youtube"
+            /></a>
+            <a href="#"
+              ><img src="../Images/facebook-icon.png" alt="Facebook"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 ScrapeTime. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../JS/instagramTrend.js"></script>
+  </body>
+</html>
+
+<!-- <div class="row1">
                 <div class="trend-item">
                     <img class="trend-img" src="../Images/iglike-blogbanner.jpg" alt="FBlikepost Banner">
                     <div class="trend-content">
@@ -150,49 +259,4 @@
                         <button class="viewPost-btn">View Post</button>
                     </div>
                 </div>
-            </div>
-        </div>
-        
-        
-
-    </main>
-
-    <footer class="mainFooter">
-        <div class="footer-container">
-            <div class="footer-section about">
-                <h2>About Us</h2>
-                <p>ScrapeTime is your go-to platform for discovering the latest trends across various social media
-                    platforms. Stay updated, save your favorite trends, and monitor their progress over time.</p>
-            </div>
-            <div class="footer-section links">
-                <h2>Quick Links</h2>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="footer-section contact">
-                <h2>Contact Us</h2>
-                <p>Email: support@scrapetime.com</p>
-                <p>Phone: +1 234 567 890</p>
-                <div class="social-icons">
-                    <a href="#"><img src="../Images/twitter-icon.png" alt="Twitter"></a>
-                    <a href="#"><img src="../Images/instagram_icon.png" alt="Instagram"></a>
-                    <a href="#"><img src="../Images/youtube_icon.png" alt="Youtube"></a>
-                    <a href="#"><img src="../Images/facebook-icon.png" alt="Facebook"></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 ScrapeTime. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="../JS/instagramTrend.js"></script>
-
-</body>
-
-</html>
+            </div> -->

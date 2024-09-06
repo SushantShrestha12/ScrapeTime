@@ -399,7 +399,6 @@ a {
 
 .subMenu-items:hover {
     border-bottom: 2px solid #5a9bd5;
-    font-size: 1.5rem; /* Slightly larger on hover for a smooth transition */
     cursor: pointer;
 }
 

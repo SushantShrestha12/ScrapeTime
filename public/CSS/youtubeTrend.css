@@ -399,8 +399,12 @@ a {
 
 .subMenu-items:hover {
     border-bottom: 2px solid #5a9bd5;
-    font-size: 1.5rem; /* Slightly larger on hover for a smooth transition */
     cursor: pointer;
+}
+
+.spinner-container{
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -542,6 +546,121 @@ a {
     }
 }
 
+ .video-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px;
+            width: 350px;
+            font-family: Arial, sans-serif;
+        }
+        .video-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .video-channel {
+            font-size: 14px;
+            color: gray;
+            margin-bottom: 10px;
+        }
+        .video-metrics {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .video-metrics div {
+            font-size: 14px;
+        }
+        .video-description {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .video-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .video-link a {
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+
+/* ***********************************Body*********************************** */
+
+.trend-item {
+    display: flex;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trend-img {
+    width: 40%;
+    object-fit: cover;
+}
+
+.trend-content {
+    padding: 20px;
+    background-color: #f1f1f1;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.trend-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+.trend-channel {
+    font-size: 16px;
+    color: #555;
+}
+
+.trend-published {
+    font-size: 14px;
+    color: #888;
+}
+
+.trend-description {
+    font-size: 14px;
+    color: #444;
+    margin: 10px 0;
+}
+
+.trend-stats {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.viewPost-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+}
+
+.viewPost-btn:hover {
+    background-color: #0056b3;
+}
+
+
+
 
 
 
@@ -620,3 +739,4 @@ a {
     font-size: 0.9rem;
     color: #ccc;
 }
+
